@@ -1,0 +1,11 @@
+machine:
+  ruby:
+    version: ruby-2.3.3
+
+dependencies:
+  override:
+    - bundle install
+
+test:
+  post:
+    - bundle exec rake test
