@@ -2,7 +2,7 @@ require_relative './helper.rb'
 
 class StructTest < Test::Unit::TestCase
   test "Count distinct with Struct" do
-    msg = "invalidQuery: Aggregate functions with DISTINCT cannot be used with arguments of type STRUCT<INT64, STRING> at [7:8]"
+    msg = "invalidQuery: Aggregate functions with DISTINCT cannot be used with arguments of type STRUCT at [7:8]"
     expected_error = Google::Cloud::InvalidArgumentError.new(msg)
 
     assert_raise(expected_error) do
